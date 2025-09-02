@@ -35,8 +35,7 @@ namespace TaxRecordApp.Server.Controllers
             return taxRecord;
         }
 
-        // PUT: api/TaxRecords/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT: api/TaxRecords/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTaxRecord(int id, TaxRecord taxRecord)
         {
@@ -67,7 +66,6 @@ namespace TaxRecordApp.Server.Controllers
         }
 
         // POST: api/TaxRecords
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<TaxRecord>> PostTaxRecord(TaxRecord taxRecord)
         {
@@ -77,7 +75,7 @@ namespace TaxRecordApp.Server.Controllers
             return CreatedAtAction("GetTaxRecord", new { id = taxRecord.Id }, taxRecord);
         }
 
-        // DELETE: api/TaxRecords/5
+        // DELETE: api/TaxRecords/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTaxRecord(int id)
         {
