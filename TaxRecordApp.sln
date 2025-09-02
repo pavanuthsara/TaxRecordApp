@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "taxrecordapp.client", "taxrecordapp.client\taxrecordapp.client.esproj", "{58164B4C-BADD-E7D7-FF43-BECA562F91D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxRecordApp.Server", "TaxRecordApp.Server\TaxRecordApp.Server.csproj", "{35325407-FBC0-4FDA-BCDB-F2704B5080C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58164B4C-BADD-E7D7-FF43-BECA562F91D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58164B4C-BADD-E7D7-FF43-BECA562F91D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58164B4C-BADD-E7D7-FF43-BECA562F91D3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{58164B4C-BADD-E7D7-FF43-BECA562F91D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58164B4C-BADD-E7D7-FF43-BECA562F91D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58164B4C-BADD-E7D7-FF43-BECA562F91D3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{35325407-FBC0-4FDA-BCDB-F2704B5080C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35325407-FBC0-4FDA-BCDB-F2704B5080C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35325407-FBC0-4FDA-BCDB-F2704B5080C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35325407-FBC0-4FDA-BCDB-F2704B5080C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35503B4C-6223-4632-8E5E-42060295B870}
+	EndGlobalSection
+EndGlobal
