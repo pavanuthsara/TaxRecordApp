@@ -1,13 +1,28 @@
 <div class="container">
   <h2>Tax Records</h2>
+  <div class="search-container">
+    <input #searchInput (input)="filterRecords(searchInput.value)" type="text" placeholder="Search by Record Title...">
+  </div>
+  <div class="sort-container">
+    <label for="sort-by">Sort by:</label>
+    <select id="sort-by" (change)="onSortColumnChange($event)">
+      <option value="">-- Select --</option>
+      <option value="taxYear">Tax Year</option>
+      <option value="incomeAmount">Income Amount</option>
+    </select>
+    <button (click)="toggleSortDirection()">
+      {{ sortDirection === 'asc' ? 'Ascending' : 'Descending' }}
+    </button>
+  </div>
   <button class="add-button" routerLink="/add">Add New Tax Record</button>
   <div *ngIf="errorMessage" class="error-message">
     {{ errorMessage }}
   </div>
-  <div *ngIf="taxRecords.length === 0 && !errorMessage" class="no-records">
-    No tax records found.
+  <div *ngIf="filteredTaxRecords.length === 0 && !errorMessage" class="no-records">
+    <span *ngIf="taxRecords.length > 0">No records match your search.</span>
+    <span *ngIf="taxRecords.length === 0">No tax records found.</span>
   </div>
-  <table *ngIf="taxRecords.length > 0" class="table table-bordered table-striped">
+  <table *ngIf="filteredTaxRecords.length > 0" class="table table-bordered table-striped">
     <thead>
       <tr>
         <th>Record Title</th>
@@ -17,7 +32,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let record of taxRecords">
+      <tr *ngFor="let record of filteredTaxRecords">
         <td><a [routerLink]="['/edit', record.id]">{{ record.recordTitle }}</a></td>
         <td>{{ record.taxYear }}</td>
         <td>{{ record.incomeAmount }}</td>
