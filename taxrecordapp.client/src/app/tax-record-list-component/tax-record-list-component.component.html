@@ -22,6 +22,10 @@
         <td>{{ record.taxYear }}</td>
         <td>{{ record.incomeAmount }}</td>
         <td>
+          <button [routerLink]="['/record', record.id]">View</button>
+          &nbsp;
+          <!--<a [routerLink]="['/edit', record.id]">Edit</a>
+          &nbsp;-->
           <button (click)="deleteRecord(record.id)">Delete</button>
         </td>
       </tr>
