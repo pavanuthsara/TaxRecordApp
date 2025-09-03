@@ -7,7 +7,7 @@ namespace TaxRecordApp.Data
         public int Id { get; set; }
         public required string RecordTitle { get; set; }
         public required int TaxYear { get; set; }
-        public required decimal IncomeAccount { get; set; }
+        public required decimal IncomeAmount { get; set; }
         public required decimal DeductionsAmount { get; set; }
         public string Notes { get; set; }
 

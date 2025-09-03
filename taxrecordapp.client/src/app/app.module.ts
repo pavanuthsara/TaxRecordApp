@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TaxRecordListComponentComponent } from './tax-record-list-component/tax-record-list-component.component';
 import { TaxRecordFormComponentComponent } from './tax-record-form-component/tax-record-form-component.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: TaxRecordListComponentComponent },
@@ -21,7 +21,7 @@ const routes: Routes = [
     TaxRecordFormComponentComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, FormsModule, RouterModule.forRoot(routes)
+    BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

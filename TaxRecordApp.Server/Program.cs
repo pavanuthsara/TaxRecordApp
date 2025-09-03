@@ -14,7 +14,20 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseInMemoryDatabase(builder.Configuration.GetConnectionString("TaxRecordsDb"))
 );
 
+//cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:53150")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowAngularApp");
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
