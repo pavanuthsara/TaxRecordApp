@@ -1,5 +1,5 @@
 /* Global App Styles */
-* {
+/** {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,17 +12,17 @@ body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
   overflow-x: hidden;
-}
+}*/
 
 /* App Root Container */
-app-root {
+/*app-root {
   display: block;
   min-height: 100vh;
   position: relative;
-}
+}*/
 
 /* Main Header */
-h1 {
+/*h1 {
   background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   color: white;
   text-align: center;
@@ -34,10 +34,10 @@ h1 {
   position: relative;
   overflow: hidden;
   letter-spacing: 1px;
-}
+}*/
 
   /* Animated Background Pattern */
-  h1::before {
+  /*h1::before {
     content: '';
     position: absolute;
     top: 0;
@@ -46,10 +46,10 @@ h1 {
     height: 100%;
     background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.1), transparent );
     animation: shimmer 3s infinite;
-  }
+  }*/
 
   /* Decorative Elements */
-  h1::after {
+  /*h1::after {
     content: '💰📊💼';
     position: absolute;
     top: 50%;
@@ -58,10 +58,10 @@ h1 {
     font-size: 1.5rem;
     opacity: 0.3;
     animation: float 6s ease-in-out infinite;
-  }
+  }*/
 
 /* Author Credit Styling */
-h1 {
+/*h1 {
   background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   position: relative;
   display: flex;
@@ -82,20 +82,20 @@ h1 {
     position: static;
     transform: none;
     animation: none;
-  }
+  }*/
 
 /* Main Content Area */
-router-outlet {
+/*router-outlet {
   display: block;
-}
+}*/
 
   /* Content Wrapper (for router-outlet content) */
-  router-outlet + * {
+  /*router-outlet + * {
     animation: fadeInUp 0.6s ease-out;
-  }
+  }*/
 
 /* Background Pattern */
-body::before {
+/*body::before {
   content: '';
   position: fixed;
   top: 0;
@@ -105,10 +105,10 @@ body::before {
   background-image: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
-}
+}*/
 
 /* Navigation Breadcrumb (if needed) */
-.breadcrumb {
+/*.breadcrumb {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 1rem 2rem;
@@ -124,10 +124,10 @@ body::before {
 
     .breadcrumb a:hover {
       color: white;
-    }
+    }*/
 
 /* Footer (if needed) */
-.app-footer {
+/*.app-footer {
   background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   color: white;
   text-align: center;
@@ -140,10 +140,10 @@ body::before {
     margin: 0;
     opacity: 0.8;
     font-size: 0.9rem;
-  }
+  }*/
 
 /* Loading State */
-.loading-container {
+/*.loading-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,10 +165,10 @@ body::before {
   color: white;
   font-size: 1.1rem;
   font-weight: 500;
-}
+}*/
 
 /* Error State */
-.error-container {
+/*.error-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,10 +187,10 @@ body::before {
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
-}
+}*/
 
 /* Animations */
-@keyframes shimmer {
+/*@keyframes shimmer {
   0% {
     left: -100%;
   }
@@ -230,10 +230,10 @@ body::before {
   100% {
     transform: rotate(360deg);
   }
-}
+}*/
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   h1 {
     font-size: 2rem;
     padding: 1.5rem 1rem;
@@ -262,10 +262,10 @@ body::before {
       font-size: 0.8rem;
       letter-spacing: 0.5px;
     }
-}
+}*/
 
 /* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   body {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   }
@@ -273,10 +273,10 @@ body::before {
   h1 {
     background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
   }
-}
+}*/
 
 /* High Contrast Mode */
-@media (prefers-contrast: high) {
+/*@media (prefers-contrast: high) {
   h1 {
     background: #000;
     color: #fff;
@@ -287,10 +287,10 @@ body::before {
     background: #fff;
     color: #000;
   }
-}
+}*/
 
 /* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
+/*@media (prefers-reduced-motion: reduce) {
   h1::before,
   h1::after,
   router-outlet + * {
@@ -300,10 +300,10 @@ body::before {
   * {
     transition: none !important;
   }
-}
+}*/
 
 /* Print Styles */
-@media print {
+/*@media print {
   body {
     background: white !important;
     color: black !important;
@@ -325,10 +325,10 @@ body::before {
   body::before {
     display: none;
   }
-}
+}*/
 
 /* Accessibility Improvements */
-.sr-only {
+/*.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -338,16 +338,16 @@ body::before {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
+}*/
 
 /* Focus Styles */
-*:focus-visible {
+/**:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
   border-radius: 4px;
-}
+}*/
 
 /* Smooth Scrolling */
-html {
+/*html {
   scroll-behavior: smooth;
-}
+}*/

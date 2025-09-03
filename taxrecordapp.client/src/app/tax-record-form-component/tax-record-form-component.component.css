@@ -1,5 +1,5 @@
 /* Container and Layout */
-.container {
+/*.container {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
@@ -7,10 +7,10 @@
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+}*/
 
   /* Page Title */
-  .container h2 {
+  /*.container h2 {
     color: #1f2937;
     font-size: 1.75rem;
     font-weight: 600;
@@ -18,33 +18,33 @@
     text-align: center;
     border-bottom: 2px solid #e5e7eb;
     padding-bottom: 1rem;
-  }
+  }*/
 
 /* Form Styling */
-form {
+/*form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
+}*/
 
 /* Form Groups */
-.form-group {
+/*.form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
+}*/
 
   /* Labels */
-  .form-group label {
+  /*.form-group label {
     font-weight: 600;
     color: #374151;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-  }
+  }*/
 
   /* Input Fields */
-  .form-group input,
+  /*.form-group input,
   .form-group textarea {
     padding: 0.875rem 1rem;
     border: 2px solid #d1d5db;
@@ -67,17 +67,17 @@ form {
     .form-group textarea::placeholder {
       color: #9ca3af;
       font-style: italic;
-    }
+    }*/
 
   /* Textarea Specific */
-  .form-group textarea {
+  /*.form-group textarea {
     min-height: 100px;
     resize: vertical;
     font-family: inherit;
-  }
+  }*/
 
     /* Invalid Input States */
-    .form-group input.invalid,
+    /*.form-group input.invalid,
     .form-group textarea.invalid {
       border-color: #ef4444;
       background-color: #fef2f2;
@@ -87,10 +87,10 @@ form {
       .form-group textarea.invalid:focus {
         border-color: #dc2626;
         box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-      }
+      }*/
 
 /* Error Messages */
-.error {
+/*.error {
   color: #dc2626;
   font-size: 0.875rem;
   font-weight: 500;
@@ -107,19 +107,19 @@ form {
 
   .error div {
     margin: 0;
-  }
+  }*/
 
 /* Form Actions */
-.form-actions {
+/*.form-actions {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
   justify-content: center;
   flex-wrap: wrap;
-}
+}*/
 
   /* Buttons */
-  .form-actions button {
+  /*.form-actions button {
     padding: 0.875rem 2rem;
     border: none;
     border-radius: 8px;
@@ -130,10 +130,10 @@ form {
     min-width: 120px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-  }
+  }*/
 
     /* Primary Button (Submit) */
-    .form-actions button[type="submit"] {
+    /*.form-actions button[type="submit"] {
       background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
       color: white;
       box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
@@ -155,10 +155,10 @@ form {
         transform: none;
         box-shadow: none;
         opacity: 0.6;
-      }
+      }*/
 
     /* Secondary Button (Cancel) */
-    .form-actions button[type="button"] {
+    /*.form-actions button[type="button"] {
       background: #ffffff;
       color: #6b7280;
       border: 2px solid #d1d5db;
@@ -170,10 +170,10 @@ form {
         color: #374151;
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
+      }*/
 
 /* Success Message */
-.success-message {
+/*.success-message {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
   padding: 1rem 1.5rem;
@@ -188,10 +188,10 @@ form {
   .success-message::before {
     content: '✅ ';
     margin-right: 0.5rem;
-  }
+  }*/
 
 /* Error Message */
-.error-message {
+/*.error-message {
   background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
   color: white;
   padding: 1rem 1.5rem;
@@ -206,10 +206,10 @@ form {
   .error-message::before {
     content: '❌ ';
     margin-right: 0.5rem;
-  }
+  }*/
 
 /* Animations */
-@keyframes slideIn {
+/*@keyframes slideIn {
   from {
     opacity: 0;
     transform: translateY(-10px);
@@ -219,10 +219,10 @@ form {
     opacity: 1;
     transform: translateY(0);
   }
-}
+}*/
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .container {
     margin: 1rem;
     padding: 1.5rem;
@@ -258,18 +258,18 @@ form {
     padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
   }
-}
+}*/
 
 /* Focus Accessibility */
-.form-group input:focus-visible,
+/*.form-group input:focus-visible,
 .form-group textarea:focus-visible,
 .form-actions button:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
-}
+}*/
 
 /* Print Styles */
-@media print {
+/*@media print {
   .container {
     box-shadow: none;
     border: 1px solid #ccc;
@@ -278,4 +278,4 @@ form {
   .form-actions button {
     display: none;
   }
-}
+}*/

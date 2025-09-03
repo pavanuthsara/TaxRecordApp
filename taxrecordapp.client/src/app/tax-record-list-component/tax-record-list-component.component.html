@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let record of taxRecords">
-        <td>{{ record.recordTitle }}</td>
+        <td><a [routerLink]="['/edit', record.id]">{{ record.recordTitle }}</a></td>
         <td>{{ record.taxYear }}</td>
         <td>{{ record.incomeAmount }}</td>
       </tr>
