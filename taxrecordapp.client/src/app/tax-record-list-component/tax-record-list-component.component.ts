@@ -22,4 +22,18 @@ export class TaxRecordListComponentComponent implements OnInit{
     });
   }
 
+  deleteRecord(id: number): void {
+    if (confirm('Are you sure you want to delete this record?')) {
+      this.taxRecordService.deleteTaxRecord(id).subscribe({
+        next: () => {
+          this.taxRecords = this.taxRecords.filter(record => record.id !== id);
+        },
+        error: (err) => {
+          this.errorMessage = 'Failed to delete tax record.';
+          console.error(err);
+        }
+      });
+    }
+  }
+
 }

@@ -13,6 +13,7 @@
         <th>Record Title</th>
         <th>Tax Year</th>
         <th>Total Income (LKR)</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,9 @@
         <td><a [routerLink]="['/edit', record.id]">{{ record.recordTitle }}</a></td>
         <td>{{ record.taxYear }}</td>
         <td>{{ record.incomeAmount }}</td>
+        <td>
+          <button (click)="deleteRecord(record.id)">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>
