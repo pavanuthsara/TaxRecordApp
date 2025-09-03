@@ -1,7 +1,9 @@
+using System.ComponentModel.DataAnnotations;
 namespace TaxRecordApp.Data
 {
     public class TaxRecord
     { 
+        [Key]
         public int Id { get; set; }
         public required string RecordTitle { get; set; }
         public required int TaxYear { get; set; }
