@@ -1,90 +1,364 @@
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 15px;
+/* Container and Layout */
+/*.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}*/
+
+  /* Page Header */
+  /*.container h2 {
+    color: #1f2937;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+    .container h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      border-radius: 2px;
+    }*/
+
+/* Add Button */
+/*.add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
+  .add-button::before {
+    content: '+ ';
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .add-button:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+  }
+
+  .add-button:active {
+    transform: translateY(0);
+  }*/
+
+/* Error Message */
+/*.error-message {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
   text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+  animation: slideIn 0.3s ease-out;
 }
 
-.error-message {
-  color: #d32f2f;
-  background-color: #ffebee;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  .error-message::before {
+    content: '❌ ';
+    margin-right: 0.5rem;
+  }*/
+
+/* No Records Message */
+/*.no-records {
   text-align: center;
+  padding: 3rem 2rem;
+  color: #6b7280;
+  font-size: 1.125rem;
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  margin-top: 2rem;
+  position: relative;
 }
 
-.no-records {
-  color: #666;
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  text-align: center;
-}
+  .no-records::before {
+    content: '📋';
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
 
-.table {
+  .no-records::after {
+    content: 'Click "Add New Tax Record" to get started!';
+    display: block;
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+    font-style: italic;
+  }*/
+
+/* Table Styling */
+/*.table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}*/
+
+  /* Table Header */
+  /*.table thead {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: white;
+  }
+
+    .table thead th {
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: none;
+    }
+
+      .table thead th:first-child {
+        border-top-left-radius: 12px;
+      }
+
+      .table thead th:last-child {
+        border-top-right-radius: 12px;
+      }*/
+
+  /* Table Body */
+  /*.table tbody {
+    background: white;
+  }
+
+    .table tbody td {
+      padding: 1.25rem 1.5rem;
+      border: none;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 0.95rem;
+      color: #374151;
+      transition: background-color 0.2s ease;
+    }*/
+
+    /* Table Rows */
+    /*.table tbody tr {
+      transition: all 0.2s ease;
+    }
+
+      .table tbody tr:hover {
+        background-color: #f8fafc;
+        transform: scale(1.01);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .table tbody tr:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+        .table tbody tr:nth-child(even):hover {
+          background-color: #f1f5f9;
+        }
+
+      .table tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 12px;
+      }
+
+      .table tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 12px;
+      }*/
+
+    /* Special styling for currency column */
+    /*.table tbody td:nth-child(3) {
+      font-weight: 600;
+      color: #059669;
+      font-family: 'Courier New', monospace;
+    }
+
+      .table tbody td:nth-child(3)::before {
+        content: 'LKR ';
+        font-weight: 500;
+        color: #6b7280;
+        font-size: 0.85rem;
+      }*/
+
+/* Table Borders */
+/*.table-bordered {
+  border: 2px solid #e5e7eb;
 }
 
-.table-bordered th,
-.table-bordered td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #ffffff;
 }
 
 .table-striped tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
+  background-color: #f8fafc;
+}*/
 
-.table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-  color: #333;
-}
-
-.table td {
-  color: #555;
-}
-
-.table tr:hover {
-  background-color: #f1f1f1;
-}
-
-.add-button {
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  background: #27ae60;
-  color: white;
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 600px) {
-  .table th,
-  .table td {
-    padding: 8px;
-    font-size: 14px;
+/* Animations */
+/*@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 
-  h2 {
-    font-size: 20px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.table {
+  animation: fadeIn 0.5s ease-out;
+}*/
+
+/* Responsive Design */
+/*@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+    overflow-x: auto;
+  }
+
+    .container h2 {
+      font-size: 1.75rem;
+    }
+
+  .add-button {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .table {
+    min-width: 600px;
+    font-size: 0.875rem;
+  }
+
+    .table thead th,
+    .table tbody td {
+      padding: 1rem;
+    }
+
+  .no-records {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+    .container h2 {
+      font-size: 1.5rem;
+    }
+
+  .add-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .table {
+    min-width: 500px;
+    font-size: 0.8rem;
+  }
+
+    .table thead th,
+    .table tbody td {
+      padding: 0.75rem;
+    }
+
+  .no-records {
+    padding: 1.5rem 0.75rem;
+    font-size: 1rem;
+  }
+
+    .no-records::before {
+      font-size: 2.5rem;
+    }
+}*/
+
+/* Focus Accessibility */
+/*.add-button:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+.table tbody tr:focus-within {
+  background-color: #e0f2fe;
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}*/
+
+/* Loading State (if needed) */
+/*.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+  .loading::before {
+    content: '⏳ ';
+    margin-right: 0.5rem;
+  }*/
+
+/* Print Styles */
+/*@media print {
+  .container {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .add-button {
+    display: none;
+  }
+
+  .table tbody tr:hover {
+    background-color: inherit !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .error-message {
+    background: #f3f4f6 !important;
+    color: #000 !important;
+    border: 1px solid #ccc;
+  }
+}*/

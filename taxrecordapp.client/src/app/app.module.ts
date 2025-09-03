@@ -6,19 +6,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TaxRecordListComponentComponent } from './tax-record-list-component/tax-record-list-component.component';
 import { TaxRecordFormComponentComponent } from './tax-record-form-component/tax-record-form-component.component';
+import { TaxRecordDetailComponent } from './tax-record-detail/tax-record-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: TaxRecordListComponentComponent },
   { path: 'add', component: TaxRecordFormComponentComponent },
-  { path: 'edit/:id', component: TaxRecordFormComponentComponent }
+  { path: 'edit/:id', component: TaxRecordFormComponentComponent },
+  { path: 'record/:id', component: TaxRecordDetailComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     TaxRecordListComponentComponent,
-    TaxRecordFormComponentComponent
+    TaxRecordFormComponentComponent,
+    TaxRecordDetailComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes)
