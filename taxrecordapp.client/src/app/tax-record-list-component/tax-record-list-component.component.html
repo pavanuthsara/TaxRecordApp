@@ -11,14 +11,14 @@
       <tr>
         <th>Record Title</th>
         <th>Tax Year</th>
-        <th>Total Income</th>
+        <th>Total Income (LKR)</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let record of taxRecords">
         <td>{{ record.recordTitle }}</td>
         <td>{{ record.taxYear }}</td>
-        <td>${{ record.incomeAmount }}</td>
+        <td>{{ record.incomeAmount }}</td>
       </tr>
     </tbody>
   </table>
