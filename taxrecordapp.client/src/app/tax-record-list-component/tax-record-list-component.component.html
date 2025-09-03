@@ -1,1 +1,25 @@
-<p>tax-record-list-component works!</p>
+<div class="container">
+  <h2>Tax Records</h2>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="taxRecords.length === 0 && !errorMessage" class="no-records">
+    No tax records found.
+  </div>
+  <table *ngIf="taxRecords.length > 0" class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Record Title</th>
+        <th>Tax Year</th>
+        <th>Total Income</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of taxRecords">
+        <td>{{ record.recordTitle }}</td>
+        <td>{{ record.taxYear }}</td>
+        <td>${{ record.incomeAmout }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
