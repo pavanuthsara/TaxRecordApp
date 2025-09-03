@@ -6,7 +6,7 @@ export interface TaxRecord {
   id: number;
   recordTitle: string;
   taxYear: number;
-  incomeAmout: number;
+  incomeAmount: number;
   deductionsAmount: number;
   notes: string;
 }
