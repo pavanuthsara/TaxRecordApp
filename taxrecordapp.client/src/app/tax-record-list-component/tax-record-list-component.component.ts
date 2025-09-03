@@ -8,6 +8,7 @@ import { TaxRecord, TaxRecordService } from '../services/tax-record.service';
 })
 export class TaxRecordListComponentComponent implements OnInit{
   taxRecords: TaxRecord[] = [];
+  filteredTaxRecords: TaxRecord[] = [];
   errorMessage: string = '';
 
   constructor(private taxRecordService: TaxRecordService) { }
@@ -17,9 +18,22 @@ export class TaxRecordListComponentComponent implements OnInit{
   }
   loadTaxRecords(): void {
     this.taxRecordService.getTaxRecords().subscribe({
-      next: (data) => this.taxRecords = data,
+      next: (data) => {
+        this.taxRecords = data;
+        this.filteredTaxRecords = data;
+      },
       error: (error) => this.errorMessage = error
     });
+  }
+
+  filterRecords(searchTerm: string): void {
+    if (!searchTerm) {
+      this.filteredTaxRecords = this.taxRecords;
+      return;
+    }
+    this.filteredTaxRecords = this.taxRecords.filter(record =>
+      record.recordTitle.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   }
 
   deleteRecord(id: number): void {
@@ -27,6 +41,7 @@ export class TaxRecordListComponentComponent implements OnInit{
       this.taxRecordService.deleteTaxRecord(id).subscribe({
         next: () => {
           this.taxRecords = this.taxRecords.filter(record => record.id !== id);
+          this.filteredTaxRecords = this.filteredTaxRecords.filter(record => record.id !== id);
         },
         error: (err) => {
           this.errorMessage = 'Failed to delete tax record.';
