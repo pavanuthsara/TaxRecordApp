@@ -3,10 +3,10 @@ namespace TaxRecordApp.Data
     public class TaxRecord
     { 
         public int Id { get; set; }
-        public string RecordTitle { get; set; }
-        public int TaxYear { get; set; }
-        public decimal IncomeAccount { get; set; }
-        public decimal DeductionsAmount { get; set; }
+        public required string RecordTitle { get; set; }
+        public required int TaxYear { get; set; }
+        public required decimal IncomeAccount { get; set; }
+        public required decimal DeductionsAmount { get; set; }
         public string Notes { get; set; }
 
     }
