@@ -7,7 +7,6 @@ A full-stack web application for managing tax records, built with ASP.NET Core a
 *   Create, read, update, and delete tax records.
 *   View a list of all tax records.
 *   View the details of a single tax record.
-*   Responsive user interface.
 
 ## Technologies Used
 
